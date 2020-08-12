@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF515D6824E3CF4600B50406 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF515D6724E3CF4600B50406 /* EventMonitor.swift */; };
 		CF5434B424E3351C00C6F1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5434B324E3351C00C6F1EE /* AppDelegate.swift */; };
 		CF5434B624E3351C00C6F1EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5434B524E3351C00C6F1EE /* ViewController.swift */; };
 		CF5434B824E3351E00C6F1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5434B724E3351E00C6F1EE /* Assets.xcassets */; };
 		CF5434BB24E3351E00C6F1EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5434B924E3351E00C6F1EE /* Main.storyboard */; };
 		CF5434C824E33B1400C6F1EE /* InternalBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5434C724E33B1400C6F1EE /* InternalBattery.swift */; };
 		CF5434CA24E33B6900C6F1EE /* InternalFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5434C924E33B6900C6F1EE /* InternalFinder.swift */; };
+		CF5434CC24E3B0F700C6F1EE /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5434CB24E3B0F700C6F1EE /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF515D6724E3CF4600B50406 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		CF5434B024E3351C00C6F1EE /* charging-notifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "charging-notifs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5434B324E3351C00C6F1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF5434B524E3351C00C6F1EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +28,7 @@
 		CF5434BD24E3351E00C6F1EE /* charging_notifs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = charging_notifs.entitlements; sourceTree = "<group>"; };
 		CF5434C724E33B1400C6F1EE /* InternalBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InternalBattery.swift; path = ../InternalBattery.swift; sourceTree = "<group>"; };
 		CF5434C924E33B6900C6F1EE /* InternalFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalFinder.swift; sourceTree = "<group>"; };
+		CF5434CB24E3B0F700C6F1EE /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +64,11 @@
 				CF5434C924E33B6900C6F1EE /* InternalFinder.swift */,
 				CF5434C724E33B1400C6F1EE /* InternalBattery.swift */,
 				CF5434B324E3351C00C6F1EE /* AppDelegate.swift */,
+				CF515D6724E3CF4600B50406 /* EventMonitor.swift */,
 				CF5434B524E3351C00C6F1EE /* ViewController.swift */,
 				CF5434B724E3351E00C6F1EE /* Assets.xcassets */,
 				CF5434B924E3351E00C6F1EE /* Main.storyboard */,
+				CF5434CB24E3B0F700C6F1EE /* EditViewController.swift */,
 				CF5434BC24E3351E00C6F1EE /* Info.plist */,
 				CF5434BD24E3351E00C6F1EE /* charging_notifs.entitlements */,
 			);
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5434CC24E3B0F700C6F1EE /* EditViewController.swift in Sources */,
 				CF5434CA24E33B6900C6F1EE /* InternalFinder.swift in Sources */,
 				CF5434B624E3351C00C6F1EE /* ViewController.swift in Sources */,
+				CF515D6824E3CF4600B50406 /* EventMonitor.swift in Sources */,
 				CF5434B424E3351C00C6F1EE /* AppDelegate.swift in Sources */,
 				CF5434C824E33B1400C6F1EE /* InternalBattery.swift in Sources */,
 			);
