@@ -12,7 +12,7 @@ var max = 75.0
 var min = 45.0
 
 
-
+// TODO: figure out a way to delay timer after user starts/stops charging
 
 class EditViewController: NSViewController {
     
@@ -33,8 +33,8 @@ class EditViewController: NSViewController {
     }
     
     func updateValues(max: Double, min: Double) {
-        maxLabel.stringValue = String(describing: "Stop charging at \(max)%")
-        minLabel.stringValue = String(describing: "Start charging at \(min)%")
+        maxLabel.stringValue = String(describing: "Stop charging when > \(max)%")
+        minLabel.stringValue = String(describing: "Start charging when < \(min)%")
         
     }
 }
@@ -73,8 +73,9 @@ extension EditViewController {
             updateValues(max: max, min: min)
         }
         
+        print("start monitoring")
         timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 300, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
     }
     
     @IBAction func stopMonitoring(_ sender: NSButton) {
@@ -110,12 +111,12 @@ extension EditViewController {
                     self.deliverNotification("Stop Charging", message: "Battery is greater than \(max)", isCharged: internalBattery.isCharging ?? false)
                     
                     // give internalBattery instance some time to update
-                    sleep(60)
+//                    sleep(60)
                     
                     // user stopped charging, don't check battery for an hour
                 } else {
                     print("user stopped charging")
-                    sleep(UInt32(self.LONGSLEEP))
+//                    sleep(UInt32(self.LONGSLEEP))
                 }
                 
                 // tell user to start charging
@@ -128,12 +129,12 @@ extension EditViewController {
                     self.deliverNotification("Start Charging", message: "Battery is less than \(min)", isCharged: internalBattery.isCharging ?? false)
                     
                     // give internalBattery instance some time to update
-                    sleep(60)
+//                    sleep(60)
                     
                     // user started charging, don't need to check battery for a long time
                 } else {
                     print("user started charging")
-                    sleep(UInt32(self.LONGSLEEP))
+//                    sleep(UInt32(self.LONGSLEEP))
                 }
             }
         }

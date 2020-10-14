@@ -685,13 +685,13 @@
             <objects>
                 <viewController storyboardIdentifier="EditViewController" id="XfG-lQ-9wD" customClass="EditViewController" customModule="charging_notifs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="277" height="292"/>
+                        <rect key="frame" x="0.0" y="0.0" width="334" height="292"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YjO-cj-Bav">
-                                <rect key="frame" x="115" y="230" width="144" height="17"/>
+                                <rect key="frame" x="115" y="230" width="185" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Start Charging At: 20%" id="AcL-Ki-hfG">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Start Charging When &lt; 20.0%" id="AcL-Ki-hfG">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -707,12 +707,12 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OpI-1R-Hoq">
-                                <rect key="frame" x="115" y="255" width="142" height="17"/>
+                                <rect key="frame" x="115" y="255" width="183" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="157" id="fKv-mH-x3S"/>
                                     <constraint firstAttribute="height" constant="17" id="qio-Wf-Nnv"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Stop Charging At: 80%" id="WpA-WH-ElO">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Stop Charging When &lt; 80.0%" id="WpA-WH-ElO">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -798,7 +798,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26.5" y="666"/>
+            <point key="canvasLocation" x="2" y="666"/>
         </scene>
     </scenes>
 </document>
