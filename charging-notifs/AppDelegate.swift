@@ -18,8 +18,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let menu = NSMenu()
     
-    var eventMonitor: EventMonitor?
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))

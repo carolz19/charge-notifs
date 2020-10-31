@@ -5,7 +5,7 @@
 //  Created by Carol Zhang on 2020-08-11.
 //  Copyright © 2020 Carol Zhang. All rights reserved.
 //
-// stackoverflow: https://stackoverflow.com/questions/57145091/swift-macos-batterylevel-property
+//  Credit: inexcitus on Stack Overflow https://stackoverflow.com/questions/57145091/swift-macos-batterylevel-property
 
 import Foundation
 import IOKit.ps
