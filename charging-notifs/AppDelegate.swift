@@ -76,7 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         timer?.invalidate()
         
         // checks battery level at a given time interval
-        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 300, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
     }
     
     @objc func stopMonitoring(_ sender: Any?) {
