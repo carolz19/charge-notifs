@@ -10,7 +10,7 @@ I'm a newbie to Swift and creating apps, so if you have any recommendations or t
 
 ## Installation
 Available only on macOS 10.14 Catalina.
-Download zip file from the [releases][dl-link] page.
+Download app zip file from the [releases][dl-link] page.
 
 ## License
 Charging Notifs released under the MIT license.
