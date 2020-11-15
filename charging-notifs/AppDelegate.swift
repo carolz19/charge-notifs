@@ -13,16 +13,22 @@ import UserNotifications
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
     
-    let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
+    var timer: Timer?
+    var max = 75.0
+    var min = 25.0
+    var isMonitoring = false
+    
+    let statusItem : NSStatusItem = {
+        let item = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
+        return item
+    }()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
         if let button = statusItem.button {
             button.image = NSImage(named:NSImage.Name("StatusBarButtonImage"))
         }
         
         constructMenu(statusItem: statusItem)
-        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -31,7 +37,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     
     func constructMenu(statusItem: NSStatusItem) {
         let menu = NSMenu()
-        
+        var monitoring = ""
+        if (isMonitoring) {
+            monitoring = "Currently Monitoring"
+        } else {
+            monitoring = "Not Currently Monitoring"
+        }
+        menu.addItem(withTitle: monitoring, action: nil, keyEquivalent: "")
+        menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Start Monitoring",
                                     action: #selector(AppDelegate.startMonitoring(_:)),
                                     keyEquivalent: "g"))
@@ -47,17 +60,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
             
     }
     
-//    func getPermissionNotifs() {
-//        let center = UNUserNotificationCenter.current()
-//        center.requestAuthorization(options: [.alert, .badge, .sound]) {granted, error in
-//
-//            if error != nil {
-//                print("user gave permission to deliv notifs")
-//            } else {
-//                print("user didn't give permission to deliv notifs")
-//            }
-//        }
-//    }
     
     
     
@@ -66,15 +68,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     
     
     
-    
-    
-    
-    var timer: Timer?
-    var max = 75.0
-    var min = 25.0
     
     @objc func startMonitoring(_ sender: Any?) {
-        
+        isMonitoring = true
+        constructMenu(statusItem: statusItem)
         // invalidate any existing timers
         timer?.invalidate()
         
@@ -83,7 +80,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     }
     
     @objc func stopMonitoring(_ sender: Any?) {
-        
+        isMonitoring = false
+        constructMenu(statusItem: statusItem)
         // invalidate timer to stop monitoring
         timer?.invalidate()
     }
@@ -92,6 +90,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         let notification = NSUserNotification()
         notification.title = "\(title)"
         notification.informativeText = message
+        notification.contentImage = NSImage(named:NSImage.Name("AppIcon"))
         notification.soundName = NSUserNotificationDefaultSoundName
         NSUserNotificationCenter.default.scheduleNotification(notification)
         
