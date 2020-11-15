@@ -14,8 +14,8 @@ import UserNotifications
 class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
     
     var timer: Timer?
-    var max = 75.0
-    var min = 25.0
+    var max = 80.0
+    var min = 20.0
     var isMonitoring = false
     
     let statusItem : NSStatusItem = {
