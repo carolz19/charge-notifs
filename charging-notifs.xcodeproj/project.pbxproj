@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF37BAEF2561E0C90070F70D /* charging_notifsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37BAEE2561E0C90070F70D /* charging_notifsTests.swift */; };
 		CF515D6824E3CF4600B50406 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF515D6724E3CF4600B50406 /* EventMonitor.swift */; };
 		CF5434B424E3351C00C6F1EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5434B324E3351C00C6F1EE /* AppDelegate.swift */; };
 		CF5434B824E3351E00C6F1EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5434B724E3351E00C6F1EE /* Assets.xcassets */; };
@@ -15,7 +16,20 @@
 		CF5434CA24E33B6900C6F1EE /* InternalFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5434C924E33B6900C6F1EE /* InternalFinder.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CF37BAF12561E0C90070F70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF5434A824E3351C00C6F1EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF5434AF24E3351C00C6F1EE;
+			remoteInfo = "charging-notifs";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		CF37BAEC2561E0C90070F70D /* charging-notifsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "charging-notifsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF37BAEE2561E0C90070F70D /* charging_notifsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = charging_notifsTests.swift; sourceTree = "<group>"; };
+		CF37BAF02561E0C90070F70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF515D6724E3CF4600B50406 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		CF5434B024E3351C00C6F1EE /* charging-notifs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "charging-notifs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5434B324E3351C00C6F1EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +42,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CF37BAE92561E0C90070F70D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF5434AD24E3351C00C6F1EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,10 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF37BAED2561E0C90070F70D /* charging-notifsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF37BAEE2561E0C90070F70D /* charging_notifsTests.swift */,
+				CF37BAF02561E0C90070F70D /* Info.plist */,
+			);
+			path = "charging-notifsTests";
+			sourceTree = "<group>";
+		};
 		CF5434A724E3351C00C6F1EE = {
 			isa = PBXGroup;
 			children = (
 				CF5434B224E3351C00C6F1EE /* charging-notifs */,
+				CF37BAED2561E0C90070F70D /* charging-notifsTests */,
 				CF5434B124E3351C00C6F1EE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				CF5434B024E3351C00C6F1EE /* charging-notifs.app */,
+				CF37BAEC2561E0C90070F70D /* charging-notifsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +104,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CF37BAEB2561E0C90070F70D /* charging-notifsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF37BAF52561E0C90070F70D /* Build configuration list for PBXNativeTarget "charging-notifsTests" */;
+			buildPhases = (
+				CF37BAE82561E0C90070F70D /* Sources */,
+				CF37BAE92561E0C90070F70D /* Frameworks */,
+				CF37BAEA2561E0C90070F70D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF37BAF22561E0C90070F70D /* PBXTargetDependency */,
+			);
+			name = "charging-notifsTests";
+			productName = "charging-notifsTests";
+			productReference = CF37BAEC2561E0C90070F70D /* charging-notifsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CF5434AF24E3351C00C6F1EE /* charging-notifs */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF5434C024E3351E00C6F1EE /* Build configuration list for PBXNativeTarget "charging-notifs" */;
@@ -95,10 +145,14 @@
 		CF5434A824E3351C00C6F1EE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1030;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "Carol Zhang";
 				TargetAttributes = {
+					CF37BAEB2561E0C90070F70D = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = CF5434AF24E3351C00C6F1EE;
+					};
 					CF5434AF24E3351C00C6F1EE = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -118,11 +172,19 @@
 			projectRoot = "";
 			targets = (
 				CF5434AF24E3351C00C6F1EE /* charging-notifs */,
+				CF37BAEB2561E0C90070F70D /* charging-notifsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CF37BAEA2561E0C90070F70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF5434AE24E3351C00C6F1EE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +197,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CF37BAE82561E0C90070F70D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF37BAEF2561E0C90070F70D /* charging_notifsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CF5434AC24E3351C00C6F1EE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +218,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CF37BAF22561E0C90070F70D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF5434AF24E3351C00C6F1EE /* charging-notifs */;
+			targetProxy = CF37BAF12561E0C90070F70D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CF5434B924E3351E00C6F1EE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -160,6 +238,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CF37BAF32561E0C90070F70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "charging-notifsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Carol.charging-notifsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/charging-notifs.app/Contents/MacOS/charging-notifs";
+			};
+			name = Debug;
+		};
+		CF37BAF42561E0C90070F70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "charging-notifsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "Carol.charging-notifsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/charging-notifs.app/Contents/MacOS/charging-notifs";
+			};
+			name = Release;
+		};
 		CF5434BE24E3351E00C6F1EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -320,6 +438,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CF37BAF52561E0C90070F70D /* Build configuration list for PBXNativeTarget "charging-notifsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF37BAF32561E0C90070F70D /* Debug */,
+				CF37BAF42561E0C90070F70D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CF5434AB24E3351C00C6F1EE /* Build configuration list for PBXProject "charging-notifs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

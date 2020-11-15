@@ -1,0 +1,23 @@
+{
+  "configurations" : [
+    {
+      "id" : "82D8A4FF-7E38-45C0-87CA-0DD25C79D4BC",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:charging-notifs.xcodeproj",
+      "identifier" : "CF5434AF24E3351C00C6F1EE",
+      "name" : "charging-notifs"
+    }
+  },
+  "testTargets" : [
+
+  ],
+  "version" : 1
+}
