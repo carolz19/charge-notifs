@@ -8,10 +8,10 @@
 
 import Cocoa
 import AppKit
-import UserNotifications
+//import UserNotifications
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate {
     
     var timer: Timer?
     var max = 80.0
