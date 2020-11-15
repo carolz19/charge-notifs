@@ -70,16 +70,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
     
     
     @objc func startMonitoring(_ sender: Any?) {
+        print("start monitoring")
         isMonitoring = true
         constructMenu(statusItem: statusItem)
         // invalidate any existing timers
         timer?.invalidate()
         
         // checks battery level at a given time interval
-        timer = Timer.scheduledTimer(timeInterval: 300, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
     }
     
     @objc func stopMonitoring(_ sender: Any?) {
+        print("stop monitoring")
         isMonitoring = false
         constructMenu(statusItem: statusItem)
         // invalidate timer to stop monitoring
@@ -101,17 +103,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDele
         
         // get user's battery information
         if let internalBattery = internalFinder.getInternalBattery() {
+            print(internalBattery.charge ?? 0)
             // send notif is battery level above max and user is charging
             if ((internalBattery.charge ?? .nan) >= max
                 && (internalBattery.isCharging ?? false) == true) {
                 self.deliverNotification("Stop Charging",
-                                        message: "Battery is greater than \(max)",
+                                        message: "Battery is greater than \(max)%",
                                         isCharged: internalBattery.isCharging ?? false)
             // send notif is battery level below max and user isn't charging
             } else if ((internalBattery.charge ?? .nan) <= min
                 && ((internalBattery.isCharging ?? false) == false)) {
                     self.deliverNotification("Start Charging",
-                                            message: "Battery is less than \(min)",
+                                            message: "Battery is less than \(min)%",
                                             isCharged: internalBattery.isCharging ?? false)
             }
         }
