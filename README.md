@@ -11,9 +11,3 @@ I'm a newbie to Swift and creating apps, so if you have any recommendations or t
 ## Installation
 Available only on macOS 10.14 Mojave.
 Download app zip file from the [releases][dl-link] page.
-
-## License
-See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
-
-[dl-link]: 
-	https://github.com/carolz19/charging-notifs/releases
