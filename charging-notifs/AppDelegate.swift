@@ -30,10 +30,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         constructMenu(statusItem: statusItem)
     }
-//
-//    func applicationWillTerminate(_ aNotification: Notification) {
-//        // Insert code here to tear down your application
-//    }
     
     func constructMenu(statusItem: NSStatusItem) {
         let menu = NSMenu()
@@ -60,15 +56,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @objc func startMonitoring(_ sender: Any?) {
         print("start monitoring")
         isMonitoring = true
@@ -86,18 +73,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         constructMenu(statusItem: statusItem)
         // invalidate timer to stop monitoring
         timer?.invalidate()
-    }
-    
-    func deliverNotification(_ title: String, message: String, isCharged: Bool) -> NSUserNotification {
-        let notification = NSUserNotification()
-        notification.title = "\(title)"
-        notification.informativeText = message
-        notification.contentImage = NSImage(named:NSImage.Name("AppIcon"))
-        notification.soundName = NSUserNotificationDefaultSoundName
-        NSUserNotificationCenter.default.scheduleNotification(notification)
-        
-        return notification
-        
     }
     
     @objc func fireTimer(_ sender: Any?) {
@@ -120,6 +95,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                             isCharged: internalBattery.isCharging ?? false)
             }
         }
+    }
+    
+    func deliverNotification(_ title: String, message: String, isCharged: Bool) -> NSUserNotification {
+        let notification = NSUserNotification()
+        notification.title = "\(title)"
+        notification.informativeText = message
+        notification.contentImage = NSImage(named:NSImage.Name("AppIcon"))
+        notification.soundName = NSUserNotificationDefaultSoundName
+        NSUserNotificationCenter.default.scheduleNotification(notification)
+        
+        return notification
+        
     }
 }
 
